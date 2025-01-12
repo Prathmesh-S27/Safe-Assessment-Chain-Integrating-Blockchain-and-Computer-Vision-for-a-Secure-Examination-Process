@@ -58,8 +58,8 @@ Follow the steps below to set up and run the project:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ishan22399/Safe-Assessment-Chain---Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
-cd Safe-Assessment-Chain---Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process
+git clone https://github.com/Prathmesh-S27/Safe-Assessment-Chain-Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
+cd Safe-Assessment-Chain-Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
 ```
 
 ### 2. Setup Blockchain
@@ -75,8 +75,8 @@ cd Safe-Assessment-Chain---Integrating-Blockchain-and-Computer-Vision-for-a-Secu
 ### 3. Configure the Application
 
 ```bash
-git clone https://github.com/ishan22399/Safe-Assessment-Chain---Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
-cd Safe-Assessment-Chain---Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process
+git clone https://github.com/Prathmesh-S27/Safe-Assessment-Chain-Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
+cd Safe-Assessment-Chain-Integrating-Blockchain-and-Computer-Vision-for-a-Secure-Examination-Process.git
 ```
 
 ### 4. Run the Flask Application
