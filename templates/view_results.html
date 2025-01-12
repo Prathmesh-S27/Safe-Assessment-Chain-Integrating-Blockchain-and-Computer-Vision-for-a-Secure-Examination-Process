@@ -1,0 +1,22 @@
+<h2>Results for {{ result.exam.name if result.exam else "Unknown Exam" }}</h2>
+<p><strong>Your Score:</strong> {{ result.score }}</p>
+<p><strong>Your Rank:</strong> {{ result.rank }}</p>
+<h3>Rankings</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Student</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ranking in rankings %}
+        <tr>
+            <td>{{ ranking.rank }}</td>
+            <td>{{ ranking.student.username if ranking.student else "Unknown Student" }}</td>
+            <td>{{ ranking.score }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

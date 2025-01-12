@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Add Exam{% endblock %}
+{% block content %}
+<h2>Add Exam</h2>
+<form method="POST" action="{{ url_for('add_exam') }}">
+    <div class="mb-3">
+        <label for="name" class="form-label">Exam Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="age_min" class="form-label">Minimum Age</label>
+        <input type="number" class="form-control" id="age_min" name="age_min" required>
+    </div>
+    <div class="mb-3">
+        <label for="age_max" class="form-label">Maximum Age</label>
+        <input type="number" class="form-control" id="age_max" name="age_max" required>
+    </div>
+    <div class="mb-3">
+        <label for="education_level" class="form-label">Education Level</label>
+        <input type="text" class="form-control" id="education_level" name="education_level" required>
+    </div>
+    <div class="mb-3">
+        <label for="eligible_colleges" class="form-label">Eligible Colleges (comma-separated)</label>
+        <textarea class="form-control" id="eligible_colleges" name="eligible_colleges"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="date" class="form-label">Exam Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+    <div class="mb-3">
+        <label for="time_limit" class="form-label">Time Limit (minutes)</label>
+        <input type="number" class="form-control" id="time_limit" name="time_limit" min="1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Exam</button>
+</form>
+{% endblock %}

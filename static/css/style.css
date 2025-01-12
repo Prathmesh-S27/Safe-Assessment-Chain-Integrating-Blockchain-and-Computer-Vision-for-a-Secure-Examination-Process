@@ -1,0 +1,23 @@
+/* Sample styling for basic structure */
+body {
+    font-family: Arial, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+input, button, select {
+    margin: 5px 0;
+    padding: 10px;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}

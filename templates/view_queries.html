@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}View Queries{% endblock %}
+{% block content %}
+<h2>Student Queries</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Query</th>
+            <th>Response</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for query in queries %}
+        <tr>
+            <td>{{ query.student.username }}</td>
+            <td>{{ query.message }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('view_queries') }}">
+                    <input type="hidden" name="query_id" value="{{ query.id }}">
+                    <textarea class="form-control" name="response" required>{{ query.response }}</textarea>
+                    <button type="submit" class="btn btn-success mt-2">Respond</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

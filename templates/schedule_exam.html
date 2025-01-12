@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Schedule Exam{% endblock %}
+{% block content %}
+<h2>Schedule Exam: {{ exam.name }}</h2>
+<form method="POST" action="{{ url_for('schedule_exam', exam_id=exam.id) }}">
+    <div class="mb-3">
+        <label for="exam_date" class="form-label">Exam Date</label>
+        <input type="date" class="form-control" id="exam_date" name="exam_date" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Schedule</button>
+</form>
+{% endblock %}

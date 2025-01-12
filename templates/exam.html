@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}MCQ Exam{% endblock %}
+{% block content %}
+<h2>MCQ Exam</h2>
+<form method="POST" action="{{ url_for('submit_exam') }}">
+    {% for mcq in mcqs %}
+        <p>{{ mcq.question }}</p>
+        <label><input type="radio" name="answer_{{ mcq.id }}" value="option1">{{ mcq.option1 }}</label>
+        <label><input type="radio" name="answer_{{ mcq.id }}" value="option2">{{ mcq.option2 }}</label>
+        <label><input type="radio" name="answer_{{ mcq.id }}" value="option3">{{ mcq.option3 }}</label>
+        <label><input type="radio" name="answer_{{ mcq.id }}" value="option4">{{ mcq.option4 }}</label>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

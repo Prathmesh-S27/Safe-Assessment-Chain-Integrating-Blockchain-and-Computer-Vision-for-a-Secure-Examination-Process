@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+<h2>Student Dashboard</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Exam Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for exam in exams %}
+        <tr>
+            <td>{{ exam.name }}</td>
+            <td>{{ exam.description }}</td>
+            <td>
+                <a href="{{ url_for('register_exam', exam_id=exam.id) }}" class="btn btn-primary btn-sm">Register</a>
+                <a href="{{ url_for('take_exam', exam_id=exam.id) }}" class="btn btn-success btn-sm">Take Exam</a>
+                <a href="{{ url_for('view_results', exam_id=exam.id) }}" class="btn btn-info btn-sm">View Results</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('contact_admin') }}" class="btn btn-secondary mt-3">Contact Admin</a>
+{% endblock %}

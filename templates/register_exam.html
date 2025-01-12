@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Register for Exam{% endblock %}
+{% block content %}
+<h2>Register for {{ exam.name }}</h2>
+<form method="POST" action="{{ url_for('register_exam', exam_id=exam.id) }}">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="college_name" class="form-label">College Name</label>
+        <input type="text" class="form-control" id="college_name" name="college_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" id="address" name="address" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="aadhaar_number" class="form-label">Aadhaar Number</label>
+        <input type="text" class="form-control" id="aadhaar_number" name="aadhaar_number" maxlength="12" required>
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name="age" required>
+    </div>
+    <div class="mb-3">
+        <label for="education_level" class="form-label">Education Level</label>
+        <input type="text" class="form-control" id="education_level" name="education_level" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+{% endblock %}

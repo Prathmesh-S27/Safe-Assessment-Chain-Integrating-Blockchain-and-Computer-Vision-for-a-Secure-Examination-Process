@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Contact Admin{% endblock %}
+{% block content %}
+<h2>Contact Admin</h2>
+<form method="POST" action="{{ url_for('contact_admin') }}">
+    <div class="mb-3">
+        <label for="message" class="form-label">Your Query</label>
+        <textarea class="form-control" id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Query</button>
+</form>
+{% endblock %}
